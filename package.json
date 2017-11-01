@@ -18,5 +18,13 @@
     "TCX"
   ],
   "author": "Stratis Christodoulou",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stratis-vip/read-tcx.git"
+  },
+  "bugs": {
+    "url": "https://github.com/stratis-vip/read-tcx/issues"
+  },
+  "homepage": "https://github.com/stratis-vip/read-tcx#readme"
 }
