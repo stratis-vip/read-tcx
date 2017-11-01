@@ -1,6 +1,6 @@
 import { iPoint, iGeoPoint } from "./tcxinterfaces";
 import  Activity  from "../activity";
-import  geoPoint  from "./geopoint";
+import  geoPoint  from "./geoPoint";
 const secondsInHour = 3600;
 
 /** Υπολογίζει το Bmi από το βάρος και το ύψος
