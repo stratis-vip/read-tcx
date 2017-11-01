@@ -7,10 +7,12 @@
     "fast-xml-parser": "^2.7.4"
   },
   "devDependencies": {
-    "@types/node": ""
+    "@types/jasmine": "^2.6.2",
+    "@types/node": "",
+    "jasmine": "^2.8.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node node_modules\\jasmine-node\\bin\\jasmine-node specs"
   },
   "keywords": [
     "TCX"
