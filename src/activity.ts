@@ -1,17 +1,7 @@
-import { TempLap, tempCreator } from './interface';
+import { TempLap, tempCreator, tempActivity } from './interface';
 import Creator from './creator';
 import Lap from './lap';
 import { ActivitiesTypes } from './enums';
-
-
-
-interface temp {
-    Sport: string;
-    Id: string;
-    Creator: tempCreator;
-    Lap: Array<TempLap>;
-}
-
 
 export default class Activity {
     Sport: ActivitiesTypes = ActivitiesTypes.Invalid;
@@ -24,7 +14,7 @@ export default class Activity {
         this.Lap = new Array<Lap>();
     }
 
-    fill = (obj: temp) => {
+    fill = (obj: tempActivity) => {
         if (obj.Sport) {
             this.Sport = ActivitiesTypes[<keyof typeof ActivitiesTypes>obj.Sport];
         }

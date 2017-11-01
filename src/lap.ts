@@ -23,19 +23,19 @@ export default class Lap {
                 this.StartTime = new Date(obj.StartTime);
             }
 
-            if (obj.TotalTimeSeconds) {
+            if (obj.TotalTimeSeconds || obj.TotalTimeSeconds >=0 ) {
                 this.TotalTimeSeconds = obj.TotalTimeSeconds
             }
 
-            if (obj.DistanceMeters) {
+            if (obj.DistanceMeters || obj.DistanceMeters >=0 ) {
                 this.DistanceMeters = obj.DistanceMeters
             }
 
-            if (obj.MaximumSpeed) {
+            if (obj.MaximumSpeed || obj.DistanceMeters >=0) {
                 this.MaximumSpeed = obj.MaximumSpeed
             }
 
-            if (obj.Calories >= 0) {
+            if (obj.Calories || obj.Calories >= 0) {
 
                 this.Calories = obj.Calories
             }

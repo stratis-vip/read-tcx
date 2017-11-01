@@ -58,4 +58,10 @@ interface HR{
     Value: number;
 }
 
-export {tempVersion, tempCreator, TempLap, HR, TempTrackPoint}
+interface tempActivity {
+    Sport: string;
+    Id: string;
+    Creator: tempCreator;
+    Lap: Array<TempLap>;
+}
+export {tempVersion, tempCreator, TempLap, HR, TempTrackPoint, tempActivity}
