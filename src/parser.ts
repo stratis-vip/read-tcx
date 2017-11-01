@@ -15,10 +15,20 @@ var options = {
     arrayMode: false
 };
 
-export const getActivityFromTCX = (fname: string): Activity => {
-    let jsonobj = fxp.parse(fs.readFileSync(fname, 'utf8'), options);
-    let obj = new TrainingCenterDatabase();
+export const getActivityFromTCX = (fname: string) => {
+    return new Promise(function(resolve, reject) {
+        fs.exists(fname, (exists) => {
+            if (exists) {
+                let jsonobj = fxp.parse(fs.readFileSync(fname, 'utf8'), options);
+                let obj = new TrainingCenterDatabase();
 
-    obj.Activities.Activity.fill(jsonobj.TrainingCenterDatabase.Activities.Activity);
-    return obj.Activities.Activity;
+                obj.Activities.Activity.fill(jsonobj.TrainingCenterDatabase.Activities.Activity);
+                resolve(obj.Activities.Activity);
+            } else {
+                reject(`Το αρχείο ${fname} δεν υπάρχει`);
+            }
+        })
+    })
 }
+
+
